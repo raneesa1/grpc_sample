@@ -1,0 +1,22 @@
+{
+  "name": "grpc_sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-recipe-service": "node ./recipe_service/main.js",
+    "start-processor-service": "node ./processor_service/main.js",
+    "start": "concurrently \"npm run start-recipe-service\" \"npm run start-processor-service\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.10.4",
+    "@grpc/proto-loader": "^0.7.12",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
